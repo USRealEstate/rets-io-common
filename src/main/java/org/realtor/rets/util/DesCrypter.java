@@ -1,8 +1,13 @@
 package org.realtor.rets.util;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.UnsupportedEncodingException;
 
 import java.security.Security;
+import java.util.Base64;
 
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
@@ -14,10 +19,8 @@ import javax.crypto.spec.SecretKeySpec;
  *
  */
 public class DesCrypter {
-    static {
-        Security.addProvider(new com.sun.crypto.provider.SunJCE());
-    }
 
+    private final static Logger logger = LoggerFactory.getLogger(DesCrypter.class);
     Cipher ecipher;
     Cipher dcipher;
 
@@ -51,7 +54,9 @@ public class DesCrypter {
             byte[] enc = ecipher.doFinal(utf8);
 
             // Encode bytes to base64 to get a string
-            return new sun.misc.BASE64Encoder().encode(enc);
+
+
+            return Base64.getEncoder().encodeToString(enc);
         } catch (javax.crypto.BadPaddingException e) {
             e.printStackTrace();
         } catch (IllegalBlockSizeException e) {
@@ -66,7 +71,7 @@ public class DesCrypter {
     public String decrypt(String str) {
         try {
             // Decode base64 to get bytes
-            byte[] dec = new sun.misc.BASE64Decoder().decodeBuffer(str);
+            byte[] dec = Base64.getDecoder().decode(str);
 
             // Decrypt
             byte[] utf8 = dcipher.doFinal(dec);

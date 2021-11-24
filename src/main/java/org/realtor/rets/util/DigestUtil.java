@@ -5,7 +5,9 @@
  */
 package org.realtor.rets.util;
 
-import org.apache.log4j.*;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.security.*;
 
@@ -13,18 +15,19 @@ import java.util.*;
 
 
 /**
- *
  * @version 1.0
  */
 public class DigestUtil {
-    /** log4j Category object */
-    static Category cat = Category.getInstance(DigestUtil.class);
+    /**
+     * log4j Category object
+     */
+    private final static Logger logger = LoggerFactory.getLogger(DigestUtil.class);
 
     /**
-    *  Create digest Authentication String
-    */
+     * Create digest Authentication String
+     */
     public static String digestAuthorization(String username, String password,
-        String method, String uri, String value) {
+                                             String method, String uri, String value) {
         Map m = parseAuthenticate(value);
         String realm = (String) m.get("realm");
         String nonce = (String) m.get("nonce");
@@ -39,13 +42,13 @@ public class DigestUtil {
                 nonce, nc, cnonce, qop);
 
         String digest = "Digest username=\"" + username + "\", " + "realm=\"" +
-            realm + "\", " + "nonce=\"" + nonce + "\", " + "opaque=\"" +
-            opaque + "\", " + "uri=\"" + uri + "\", " + "response=\"" +
-            digestResponse + "\"";
+                realm + "\", " + "nonce=\"" + nonce + "\", " + "opaque=\"" +
+                opaque + "\", " + "uri=\"" + uri + "\", " + "response=\"" +
+                digestResponse + "\"";
 
         if (isRFC2617) {
             digest += (", qop=\"" + qop + "\", " + "cnonce=\"" + cnonce +
-            "\", " + "nc=\"" + nc + "\"");
+                    "\", " + "nc=\"" + nc + "\"");
         }
 
         return digest;
@@ -74,8 +77,8 @@ public class DigestUtil {
     }
 
     public static String Digest(String username, String realm, String password,
-        String method, String uri, String nonce, String nc, String cnonce,
-        String qop) {
+                                String method, String uri, String nonce, String nc, String cnonce,
+                                String qop) {
         String digestResponse = null;
         boolean isRFC2617 = (qop != null); // Recognizes differences between RFC2069 and RFC2617
 
@@ -87,15 +90,15 @@ public class DigestUtil {
             String a1 = username + ":" + realm + ":" + password;
 
             String digestA1 = HexUtils.convert(md.digest(a1.getBytes()));
-            cat.debug("evaluateMD5ResponseDigest: digestA1(" + a1 + ")=" +
-                digestA1);
+            logger.debug("evaluateMD5ResponseDigest: digestA1(" + a1 + ")=" +
+                    digestA1);
 
             md.reset();
 
             String a2 = method + ":" + uri;
             String digestA2 = HexUtils.convert(md.digest(a2.getBytes()));
-            cat.debug("evaluateMD5ResponseDigest: digestA2(" + a2 + ")=" +
-                digestA2);
+            logger.debug("evaluateMD5ResponseDigest: digestA2(" + a2 + ")=" +
+                    digestA2);
 
             md.reset();
 
@@ -108,8 +111,8 @@ public class DigestUtil {
             response += (":" + digestA2);
 
             digestResponse = HexUtils.convert(md.digest(response.getBytes()));
-            cat.debug("evaluateMD5ResponseDigest: digestResponse(" + response +
-                ")=" + digestResponse);
+            logger.debug("evaluateMD5ResponseDigest: digestResponse(" + response +
+                    ")=" + digestResponse);
 
             return digestResponse;
         } catch (Exception e) {
