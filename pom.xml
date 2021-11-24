@@ -101,7 +101,7 @@
         <!-- DATA STRUCTURES -->
         <jackson.version>2.12.4</jackson.version>
 
-        <!-- Test -->
+        <!-- TEST -->
         <hamcrest.version>2.2</hamcrest.version>
         <hamcrest-all.version>1.3</hamcrest-all.version>
 
