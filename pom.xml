@@ -87,9 +87,6 @@
         <!-- UTILS  -->
         <guava.version>30.1.1-jre</guava.version>
 
-        <!-- Hibernate / JPA -->
-        <hibernate.version>4.3.5.Final</hibernate.version>
-
         <!-- Bean validation -->
         <hibernate-validator.version>4.3.1.Final</hibernate-validator.version>
 
