@@ -17,7 +17,6 @@ import java.io.OutputStream;
  * encodes the input stream, using the BASE64 encoding rules, as defined
  * in <a href="http://ds.internic.net/rfc/rfc1521.txt">MIME specification</a>
  * and emit the resulting data to the output stream.
- * @see org.w3c.tools.codec.Base64Decoder
  */
 public class Base64Encoder {
     private static final int BUFFER_SIZE = 1024;

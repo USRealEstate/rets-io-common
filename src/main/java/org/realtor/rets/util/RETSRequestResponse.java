@@ -1,19 +1,22 @@
 /**
- *        RETSRequestResponse.java
+ * RETSRequestResponse.java
  *
- *        @author        jbrush
- *        @version
+ * @author jbrush
+ * @version
  */
 package org.realtor.rets.util;
 
-import org.apache.log4j.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.Serializable;
 import java.util.*;
 
 
 ///////////////////////////////////////////////////////////////////////
-public class RETSRequestResponse implements java.io.Serializable {
-    static Category cat = Category.getInstance(RETSRequestResponse.class);
+public class RETSRequestResponse implements Serializable {
+    private final static Logger logger = LoggerFactory.getLogger(RETSRequestResponse.class);
     private HashMap req = null;
     private HashMap resp = null;
 
