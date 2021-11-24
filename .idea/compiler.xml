@@ -9,5 +9,8 @@
         <module name="rets-io-validation" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rets-io-validation" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
