@@ -12,7 +12,6 @@
     <description>Rets-Io-Common for RETS API</description>
     <url>https://github.com/USRealEstate/rets-io-common.git</url>
 
-
     <developers>
         <developer>
             <name>YuCheng Hu</name>
@@ -25,8 +24,7 @@
             </roles>
         </developer>
     </developers>
-
-
+    
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
