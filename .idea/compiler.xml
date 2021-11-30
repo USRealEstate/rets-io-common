@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rets-io-validation" />
+        <module name="rets-io-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="rets-io-common" target="11" />
       <module name="rets-io-validation" target="11" />
     </bytecodeTargetLevel>
   </component>

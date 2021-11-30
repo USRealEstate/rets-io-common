@@ -3,7 +3,7 @@
  *
  * Created on October 4, 2002
  */
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 
 import org.slf4j.Logger;

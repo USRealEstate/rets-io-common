@@ -1,5 +1,5 @@
 /* $Header: /usr/local/cvsroot/rets/commons/src/main/java/org/realtor/rets/util/CompactParser.java,v 1.2 2003/12/04 15:27:03 rsegelman Exp $  */
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -2,7 +2,7 @@
 // $Id: Base64FormatException.java,v 1.2 2003/12/04 15:27:03 rsegelman Exp $
 // (c) COPYRIGHT MIT and INRIA, 1996.
 // Please first read the full copyright statement in file COPYRIGHT.html
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 
 /**

@@ -1,4 +1,4 @@
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 
 import org.slf4j.Logger;
@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.UnsupportedEncodingException;
 
-import java.security.Security;
 import java.util.Base64;
 
 import javax.crypto.Cipher;

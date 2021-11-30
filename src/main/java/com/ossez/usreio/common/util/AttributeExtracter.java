@@ -3,7 +3,7 @@
  *
  * Created on October 28, 2002, 3:50 PM
  */
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

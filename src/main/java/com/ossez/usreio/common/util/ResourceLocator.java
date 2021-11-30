@@ -16,7 +16,7 @@
  *******************************************************************************
 
 */
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 import java.util.HashMap;
 import java.util.Map;

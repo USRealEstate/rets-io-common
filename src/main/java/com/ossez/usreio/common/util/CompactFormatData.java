@@ -1,6 +1,6 @@
 /* $Header: /usr/local/cvsroot/rets/commons/src/main/java/org/realtor/rets/util/CompactFormatData.java,v 1.2 2005/05/26 17:43:55 ekovach Exp $
  */
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 import java.io.*;
 import java.util.ArrayList;

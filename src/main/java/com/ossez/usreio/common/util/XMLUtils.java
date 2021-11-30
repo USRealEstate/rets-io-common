@@ -3,7 +3,7 @@
  *
  * Created on December 6, 2001, 1:21 PM
  */
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

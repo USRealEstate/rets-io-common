@@ -1,5 +1,5 @@
 // $Header: /usr/local/cvsroot/rets/commons/src/main/java/org/realtor/rets/util/RETSReplyCodes.java,v 1.4 2005/04/06 12:44:06 ekovach Exp $
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 
 import org.slf4j.Logger;

@@ -3,7 +3,7 @@
  *
  * Created on November 21, 2001, 9:54 AM
  */
-package org.realtor.rets.util;
+package com.ossez.usreio.common.util;
 
 import java.security.*;
 
